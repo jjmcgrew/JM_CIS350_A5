@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿/*
+ * Josh McGrew
+ * Assignment 5A
+ * Player platform controller
+ */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -49,6 +54,7 @@ public class PlayerPlatformerController : PhysicsObject {
 
         animator.SetBool ("grounded", grounded);
         animator.SetFloat ("velocityX", Mathf.Abs (velocity.x) / maxSpeed);
+        animator.SetFloat("velocityY", velocity.y);
 
         targetVelocity = move * maxSpeed;
     }
